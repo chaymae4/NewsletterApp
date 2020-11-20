@@ -11,6 +11,9 @@ import chaymaeidrissi.ma.newsletterapp.R
 import chaymaeidrissi.ma.newsletterapp.fragment.ArticlesFragment
 import chaymaeidrissi.ma.newsletterapp.models.Article
 
+
+
+
 class ListArticlesAdapter(
     items: List<Article>
 ) : RecyclerView.Adapter<ListArticlesAdapter.ViewHolder>(){
