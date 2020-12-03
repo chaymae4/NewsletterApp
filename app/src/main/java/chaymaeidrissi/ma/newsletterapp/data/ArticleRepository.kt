@@ -7,8 +7,10 @@ class ArticleRepository {
     private val apiService: ArticleOnlineService = ArticleOnlineService()
 
     //fun getArticles(): ArticleResponse = apiService.getArticles()
-    fun getArticlesByCountry(country:String): ArticleResponse = apiService.getArticlesByCountry(country)
+
     fun getArticlesByCategory(country: String, category: String) = apiService.getArticlesByCategory(country, category)
+    fun getArticlesByCountry(country:String): ArticleResponse = apiService.getArticlesByCountry(country)
+
     companion object {
         private var instance: ArticleRepository? = null
         fun getInstance(): ArticleRepository {

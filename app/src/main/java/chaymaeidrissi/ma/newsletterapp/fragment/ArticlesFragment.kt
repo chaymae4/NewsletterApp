@@ -1,9 +1,7 @@
 package chaymaeidrissi.ma.newsletterapp.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -11,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import chaymaeidrissi.ma.newsletterapp.R
 import chaymaeidrissi.ma.newsletterapp.adapter.ListArticlesAdapter
+import chaymaeidrissi.ma.newsletterapp.adapter.ListArticlesHandler
 
 import chaymaeidrissi.ma.newsletterapp.data.ArticleRepository
 import chaymaeidrissi.ma.newsletterapp.models.Article
@@ -46,6 +45,7 @@ class ArticlesFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setHasOptionsMenu(true)
         getArticles()
     }
     /**
@@ -56,6 +56,10 @@ class ArticlesFragment: Fragment() {
             val articles = ArticleRepository.getInstance().getArticlesByCountry("fr")
             bindData(articles.articles)
         }
+    }
+    override fun onCreateOptionsMenu(menu: Menu, menuInflater: MenuInflater) {
+        menuInflater.inflate(R.menu.main, menu)
+        super.onCreateOptionsMenu(menu, menuInflater)
     }
 
     /**
@@ -70,6 +74,7 @@ class ArticlesFragment: Fragment() {
             recyclerView.adapter = adapter
         }
     }
+
 
 
 }

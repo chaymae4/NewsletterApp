@@ -13,15 +13,9 @@ import chaymaeidrissi.ma.newsletterapp.models.Article
 
 
 
-
-
-
-
-
-
-
 class ListArticlesAdapter(
-    items: List<Article>
+    items: List<Article>,
+    val handler: ListArticlesHandler
 ) : RecyclerView.Adapter<ListArticlesAdapter.ViewHolder>(){
 
         private val mArticle: List<Article> = items
