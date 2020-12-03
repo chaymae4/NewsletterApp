@@ -65,9 +65,15 @@ class ArticleOnlineService : ArticleService {
         })
     }
 
-    override fun getArticlesByCountry(country: String): ArticleResponse {
-        return service.list(country).execute().body()!!
+    override fun getArticles(q: String): ArticleResponse {
+        TODO("Not yet implemented")
     }
+
+    override fun getArticlesByCountry(country: String): ArticleResponse {
+        TODO("Not yet implemented")
+    }
+
+
     override fun getArticlesByCategory( country: String, category: String): ArticleResponse {
         return service.listByCategory(country, category).execute().body()!!
     }

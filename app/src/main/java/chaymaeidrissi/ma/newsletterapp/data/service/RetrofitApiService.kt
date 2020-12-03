@@ -11,8 +11,7 @@ interface RetrofitApiService {
     // Elle sera concaténée avec l'url prédéfini dans retrofit
     // @GET("everything")
 //    fun list(@Query("q") q:String): Call<ArticleResponse>
-    @GET("top-headlines")
-    fun list(@Query("country") country: String): Call<ArticleResponse>
+
 
     @GET("top-headlines")
     fun listByCategory(@Query("country") country: String, @Query("category") category: String ): Call<ArticleResponse>

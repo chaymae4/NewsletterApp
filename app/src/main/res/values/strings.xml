@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NewsletterApp</string>
+    <string name="cat_gory">Catégory</string>
+    <string name="science">Science</string>
+    <string name="politique">Politique</string>
+    <string name="business">Business</string>
+    <string name="health">Health</string>
 </resources>
