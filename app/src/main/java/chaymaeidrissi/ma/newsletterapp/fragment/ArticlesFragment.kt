@@ -16,14 +16,14 @@ import chaymaeidrissi.ma.newsletterapp.models.Article
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ArticlesFragment: Fragment() {
+class ArticlesFragment: Fragment(),ListArticlesHandler {
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+     ): View? {
         val view = inflater.inflate(R.layout.articles, container, false)
 
         recyclerView = view.findViewById(R.id.articles_list)
@@ -34,6 +34,7 @@ class ArticlesFragment: Fragment() {
                 DividerItemDecoration.VERTICAL
             )
         )
+
         // Set cut corner background for API 23+
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 //
@@ -46,14 +47,17 @@ class ArticlesFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
-        getArticles()
+
+        getArticles("business")
     }
-    /**
+
+    /**kkll
      * Récupère la liste des articles dans un thread secondaire
      */
-    private fun getArticles() {
+    private fun getArticles(category: String) {
         lifecycleScope.launch(Dispatchers.IO) {
-            val articles = ArticleRepository.getInstance().getArticlesByCountry("fr")
+
+            val articles = ArticleRepository.getInstance().getArticlesByCategory("fr", category)
             bindData(articles.articles)
         }
     }
@@ -68,7 +72,7 @@ class ArticlesFragment: Fragment() {
      * Car on ne peut mas modifier les éléments de vue dans un thread secondaire
      */
     private fun bindData(articles: List<Article>){
-        val adapter = ListArticlesAdapter(articles)
+        val adapter = ListArticlesAdapter(articles,this)
         lifecycleScope.launch(Dispatchers.Main) {
 
             recyclerView.adapter = adapter

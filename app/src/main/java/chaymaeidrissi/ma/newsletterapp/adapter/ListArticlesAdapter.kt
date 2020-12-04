@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import chaymaeidrissi.ma.newsletterapp.R
-import chaymaeidrissi.ma.newsletterapp.fragment.ArticlesFragment
+import chaymaeidrissi.ma.newsletterapp.fragment.FranceFragment
 import chaymaeidrissi.ma.newsletterapp.models.Article
 
 
@@ -27,6 +27,7 @@ class ListArticlesAdapter(
             return ViewHolder(view)
 
         }
+    
 
         override fun onBindViewHolder(holder:ViewHolder, position: Int) {
             val article: Article = mArticle[position]
@@ -38,14 +39,8 @@ class ListArticlesAdapter(
 
         }
 
-   //     fun isArticleFav(article: Article):Boolean{
-      //      for (item: Article in handler.getListArticlesFav()){
-     //           if (item.url == article.url) return true
-//
-     //       }
-        ///    return false
 
-    //    }
+
 
         override fun getItemCount(): Int {
             return mArticle.size
