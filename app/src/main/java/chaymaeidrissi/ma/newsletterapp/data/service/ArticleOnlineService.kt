@@ -70,7 +70,7 @@ class ArticleOnlineService : ArticleService {
     }
 
     override fun getArticlesByCountry(country: String): ArticleResponse {
-        TODO("Not yet implemented")
+        return  service.listInitial(country).execute().body()!!
     }
 
 
