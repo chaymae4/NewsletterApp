@@ -5,15 +5,33 @@
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent">
+
        <TextView
            android:id="@+id/developpoeurs"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+           android:layout_width="match_parent"
+           android:layout_height="300dp" />
+
        <TextView
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:layout_alignTop="@+id/developpoeurs"
-           />
+           android:layout_marginTop="113dp" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="0dp"
+           android:layout_marginStart="100dp"
+           android:id="@+id/hd"
+           android:text="AIT BAALI HODA"> </TextView>
+
+       <TextView
+           android:id="@+id/ch"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginStart="100dp"
+           android:layout_marginTop="15dp"
+           android:text="Fazazi idrissi chaymae"></TextView>
    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
