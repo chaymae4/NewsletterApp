@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import chaymaeidrissi.ma.newsletterapp.R
 
-class aboutusFragment: Fragment() {
+class AboutusFragment: Fragment() {
 
     companion object {
         fun newInstance(aboutus: String): aboutusFragment{
