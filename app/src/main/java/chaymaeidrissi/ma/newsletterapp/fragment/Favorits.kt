@@ -11,7 +11,7 @@ import chaymaeidrissi.ma.newsletterapp.R
 import chaymaeidrissi.ma.newsletterapp.adapter.ListArticlesAdapter
 import chaymaeidrissi.ma.newsletterapp.models.Article
 
-class favorits: Fragment() {
+class Favorits: Fragment() {
     lateinit var recyclerView: RecyclerView
     companion object {
         fun newInstance(favorits: String): favorits {
