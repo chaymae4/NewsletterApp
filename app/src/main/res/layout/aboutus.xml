@@ -1,37 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
 
-       <TextView
-           android:id="@+id/developpoeurs"
-           android:layout_width="match_parent"
-           android:layout_height="300dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp">
 
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:layout_alignTop="@+id/developpoeurs"
-           android:layout_marginTop="113dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:layout_marginTop="0dp"
-           android:layout_marginStart="100dp"
-           android:id="@+id/hd"
-           android:text="AIT BAALI HODA"> </TextView>
 
-       <TextView
-           android:id="@+id/ch"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:layout_marginStart="100dp"
-           android:layout_marginTop="15dp"
-           android:text="Fazazi idrissi chaymae"></TextView>
-   </RelativeLayout>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="100dp"
+                android:text="Développeurs:"
+                android:textSize="16sp"/>
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="10dp"
+                android:text="AIT BAALI HODA" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="100dp"
+                android:text="FAZAZI IDRISSI CHAUMAE" />
+            <TextView
+                android:id="@+id/textView5"
+                android:autoLink="all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:text="Le lien de notre projet:
+                                         https://github.com/chaymae4/NewsletterApp" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

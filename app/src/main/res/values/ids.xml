@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="An" type="id" />
+    <item name="Et" type="id" />
+    <item name="Ch" type="id" />
+    <item name="Fr" type="id" />
+    <item name="textview" type="id" />
+    <item name="rg_lan" type="id" />
+    <item name="imageView" type="id" />
+</resources>

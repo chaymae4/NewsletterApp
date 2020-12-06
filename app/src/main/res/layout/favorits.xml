@@ -7,7 +7,7 @@
         android:id="@+id/favoris"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vous trouvez ici tous vos articles favoris :"
+        android:text=" favorits :"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,8 +19,9 @@
         android:id="@+id/recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.80"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/favoris"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favoris"
+        app:layout_constraintWidth_percent="0.80" />
 </androidx.constraintlayout.widget.ConstraintLayout>

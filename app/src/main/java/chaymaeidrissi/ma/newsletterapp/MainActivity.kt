@@ -9,8 +9,7 @@ import chaymaeidrissi.ma.newsletterapp.fragment.FranceFragment
 import chaymaeidrissi.ma.newsletterapp.util.ToolbarManager
 import org.jetbrains.anko.find
 
-class MainActivity : AppCompatActivity(), ToolbarManager{
-    override val toolbar: Toolbar by lazy { find<Toolbar>(R.id.toolbar) }
+class MainActivity : AppCompatActivity(),NavigationListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,10 +17,8 @@ class MainActivity : AppCompatActivity(), ToolbarManager{
         changeFragment(FranceFragment())
     }
 
-    override fun initMainToolBar() {
-        initMainToolBar()
-    }
-     fun changeFragment(fragment: Fragment) {
+
+     override fun changeFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_container, fragment)
             addToBackStack(null)
