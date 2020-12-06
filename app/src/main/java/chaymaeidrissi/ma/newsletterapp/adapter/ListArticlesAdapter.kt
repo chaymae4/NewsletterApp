@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import chaymaeidrissi.ma.newsletterapp.R
 import chaymaeidrissi.ma.newsletterapp.fragment.FranceFragment
 import chaymaeidrissi.ma.newsletterapp.models.Article
-
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 
 class ListArticlesAdapter(
@@ -25,20 +26,32 @@ class ListArticlesAdapter(
                 .inflate(R.layout.article_item, parent, false)
 
             return ViewHolder(view)
-
         }
     
 
-        override fun onBindViewHolder(holder:ViewHolder, position: Int) {
-            val article: Article = mArticle[position]
+   //     override fun onBindViewHolder(holder:ViewHolder, position: Int) {
+    //        val article: Article = mArticle[position]
 
-            holder.title.text = article.title
-            holder.content.text = article.content
+    //        holder.title.text = article.title
+    //        holder.content.text = article.content
 
             //val context = holder.itemView
+      //  }
+            override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+                val article: Article = mArticle[position]
+                holder.title.text = article.title
+                holder.content.text = article.content
+                val context = holder.itemView
 
-        }
+                Glide.with(context)
+                    .load(article.urlToImage)
+                    .apply(RequestOptions.circleCropTransform())
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .error(R.drawable.ic_launcher_background)
+                    .skipMemoryCache(false)
+                    .into(holder.image)
 
+            }
 
 
 
