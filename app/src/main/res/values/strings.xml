@@ -5,9 +5,11 @@
     <string name="politique">Politique</string>
     <string name="business">Business</string>
     <string name="health">Health</string>
-    <string name="angleterre" />
-    <string name="etats_unis" />
-    <string name="chine" />
-    <string name="france" />
-    <string name="choisissez_le_pays" />
+    <string name="angleterre" >ANGLETERRE</string>
+    <string name="eu" >ETAT UNIS</string>
+    <string name="chine" >CHINE</string>
+    <string name="france" >FRANCE</string>
+    <string name="choisissez_le_pays" >Choisissez le pays que vous désirez </string>
+    <string name="next" >NEXT</string>
+    <string name="mr" >MAROC</string>
 </resources>
