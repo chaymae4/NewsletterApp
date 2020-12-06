@@ -10,16 +10,7 @@
 </item>
 
     <item
-        android:id="@+id/Science"
-        android:title="@string/science"/>
-    <item
-        android:id="@+id/Politique"
-        android:title="@string/politique"/>
-    <item
-        android:id="@+id/Business"
-        android:title="@string/business"/>
-    <item
-        android:id="@+id/Health"
-        android:title="@string/health"/>
+        android:id="@+id/AboutUs1"
+        android:title="AboutUs" />
 
 </menu>
