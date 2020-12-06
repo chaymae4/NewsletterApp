@@ -79,6 +79,9 @@ class ArticlesFragment: Fragment(),ListArticlesHandler {
         }
     }
 
+    override fun getListArticlesFav(): List<Article> {
+        TODO("Not yet implemented")
+    }
 
 
 }

@@ -11,7 +11,17 @@ interface ToolbarManager {
     fun initMainToolBar(){
         toolbar.title = "Newsletter"
         toolbar.inflateMenu(R.menu.main)
-        println("did it")
+        toolbar.setOnMenuItemClickListener(object :Toolbar.OnMenuItemClickListener{
+            override fun onMenuItemClick(item: MenuItem?): Boolean {
+                when(item?.itemId){
+                    R.id.setting->{
+                        Toast.makeText(toolbar.context,"click it",Toast.LENGTH_SHORT).show()
+                    }
+                }
+                return true
+            }
+        })
+
        /* toolbar.setOnMenuItemClickListener(object  :Toolbar.OnMenuItemClickListener{
             override fun onMenuItemClick(item: MenuItem?): Boolean {
                 when(item?.itemId){
