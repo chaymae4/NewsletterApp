@@ -6,5 +6,8 @@
     <item
         android:id="@+id/aboutus"
         android:title="About Us"/>
+    <item
+        android:id="@+id/favorits"
+        android:title="Favorits"/>
 
 </menu>

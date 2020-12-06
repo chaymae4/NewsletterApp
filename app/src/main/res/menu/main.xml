@@ -12,5 +12,8 @@
     <item
         android:id="@+id/AboutUs1"
         android:title="AboutUs" />
+    <item
+        android:id="@+id/favorits1"
+        android:title="Favorits" />
 
 </menu>
